@@ -5,8 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from '@/pages/Home'
 import Loading from '@/components/shared/Loading'
 import ComingSoon from '@/components/shared/ComingSoon'
-import LeagueDetails from '@/pages/LeagueDetails'
-import NotFound from '@/components/shared/NotFound'
+ import NotFound from '@/components/shared/NotFound'
 import Error from '@/components/shared/Error'
 
 const AppLayout = lazy(() => import('@/components/layout/AppLayout.tsx'))
@@ -52,10 +51,7 @@ export default function App() {
           path: 'more',
           element: <ComingSoon />,
         },
-        {
-          path: 'leagues/:id',
-          element: <LeagueDetails />,
-        },
+      
       ],
     },
     {

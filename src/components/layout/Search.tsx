@@ -54,11 +54,10 @@ export default function Search() {
     <FormControl sx={{ flexGrow: 1 }} variant='outlined'>
       <CustomOutlinedInput
         id='search'
-        placeholder='أبحث عن اسم الدوري أو البطوله'
-        dir='rtl'
-        inputRef={inputRef}
-        value={searchTerm}
-        onChange={onHandleChange}
+        placeholder='Search for league or competition'
+        // inputRef={inputRef}
+        // value={searchTerm}
+        // onChange={onHandleChange}
         type='search'
         startAdornment={
           <InputAdornment position='end'>

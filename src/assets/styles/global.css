@@ -9,7 +9,7 @@ html {
   font-size: 10px;
 }
 
-.active {
+.active ,.MuiCircularProgress-svg {
   color: hsl(349, 80%, 50%);
 }
 
@@ -23,5 +23,57 @@ html {
 @media (max-width: 767px) {
   html {
     font-size: 8px;
+  }
+}
+ .spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+}
+
+ .circular-progress {
+  width: 50px; 
+  height: 50px;
+  border: 6px solid rgba(0, 0, 0, 0.1); 
+  border-top: 6px solid  hsl(349, 80%, 50%); 
+  border-radius: 50%; 
+  animation: spin 1s linear infinite;  
+}
+
+ @keyframes spin {
+  0% {
+    transform: rotate(0deg);  
+  }
+  100% {
+    transform: rotate(360deg); 
+  }
+}
+
+.team-image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.fav-button , .fav-button:focus , .fav-button:active , .fav-button:hover {
+  all: unset;
+  cursor: pointer;
+}
+.active-fav{
+  fill:#FFC233;
+}
+.icon{
+  font-size: 2.5rem;
+
+}
+.MuiTabs-scrollButtons.Mui-disabled {
+  opacity: 0.3;
+}
+
+
+@media (min-width: 1024px) {
+  .MuiTabScrollButton-root{
+    display:none;
   }
 }

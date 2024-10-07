@@ -1,13 +1,17 @@
 import axios from 'axios'
+import { BASE_URL ,API_TOKEN } from '@/utils/constants'
 
 const API = axios.create({
-  baseURL: '/',
+  baseURL: BASE_URL,
   headers: {
     'Content-Type': 'application/json',
-    Accept: 'application/json',
-  },
+    'Accept-Language': 'ar',
+},
+
+
 })
-API.interceptors.response.use(
+ export const URL = (endpoint:string , more?:string) => more ? `${endpoint}?api_token=${API_TOKEN}&${more}` : `${endpoint}?api_token=${API_TOKEN}`
+ API.interceptors.response.use(
   (response) => response,
   (error) => {
     const formattedError = {

@@ -1,10 +1,16 @@
 import { Box, Typography, Button } from '@mui/material'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import { useNavigate } from 'react-router-dom'
+import { useCategoryStore } from '@/stores/category'
+import { usePaginationStore } from '@/stores/pagination'
 
 const ComingSoon = () => {
   const navigate = useNavigate()
+  const {resetCategory} = useCategoryStore();
+  const {reset} = usePaginationStore();
   const goToHome = () => {
+    resetCategory();
+    reset();
     navigate('/')
   }
   return (

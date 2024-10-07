@@ -29,11 +29,11 @@ type LinkProps = {
 }
 
 const links: LinkProps[] = [
-  { title: 'البطولات', url: '/', icon: <HomeIcon /> },
-  { title: 'الاخبار', url: '/news', icon: <ArticleIcon /> },
-  { title: 'المباريات', url: '/matches', icon: <SportsSoccerIcon /> },
-  { title: 'الكوبونات', url: '/coupons', icon: <LocalOfferIcon /> },
-  { title: 'المزيد', url: '/more', icon: <MoreHorizIcon /> },
+  { title: 'Leagues', url: '/', icon: <HomeIcon /> },
+  { title: 'News', url: '/news', icon: <ArticleIcon /> },
+  { title: 'Matches', url: '/matches', icon: <SportsSoccerIcon /> },
+  { title: 'Coupons', url: '/coupons', icon: <LocalOfferIcon /> },
+  { title: 'More', url: '/more', icon: <MoreHorizIcon /> },
 ]
 
 export default function Footer() {

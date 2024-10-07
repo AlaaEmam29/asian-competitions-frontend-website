@@ -4,15 +4,13 @@ import { createTheme, ThemeProvider, PaletteMode, StyledEngineProvider } from '@
 import rtlPlugin from 'stylis-plugin-rtl'
 import { prefixer } from 'stylis'
 import createCache from '@emotion/cache'
-import useLeagues from '@/hooks/competition/useLeagues'
-
+ 
 import getAppTheme from '@/theme/getAppTheme'
 import Container from '@mui/material/Container'
 
 import Navbar from '@/components/layout/Navbar'
 import { Outlet } from 'react-router-dom'
 import { CacheProvider } from '@emotion/react'
-import Loading from '@/components/shared/Loading'
 import { useCategoryStore } from '@/stores/category'
 import { useLocation } from 'react-router-dom'
 import Footer from '@/components/layout/Footer'
@@ -30,15 +28,13 @@ export default function AppLayout() {
     key: 'muirtl',
     stylisPlugins: [prefixer, rtlPlugin],
   })
-  const { leaguesLoading } = useLeagues()
-  useEffect(() => {
+   useEffect(() => {
     resetCategory()
   }, [location.pathname])
 
-  if (leaguesLoading) return <Loading />
 
   return (
-    <CacheProvider value={cacheRtl}>
+    // <CacheProvider value={cacheRtl}>
       <StyledEngineProvider injectFirst>
         <ThemeProvider theme={appTheme}>
           <CssBaseline enableColorScheme />
@@ -53,6 +49,6 @@ export default function AppLayout() {
           <Footer />
         </ThemeProvider>
       </StyledEngineProvider>
-    </CacheProvider>
+    // </CacheProvider>
   )
 }

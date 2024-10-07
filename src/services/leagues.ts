@@ -1,19 +1,19 @@
 import API from './index'
 import { ILeague } from '@/types/leagues'
+import { API_TOKEN } from '@/utils/constants'
 
 const getLeagues = async ({
   search = '',
-  category = '',
-}: {
+ }: {
   search: string
-  category: string
-}): Promise<ILeague[]> => {
-  console.log(search, category, 'search , category')
-  const { data } = await API.get('/api/leagues', {
+ }): Promise<any> => {
+ 
+
+   const { data } = await API.get('football/leagues', {
     params: {
       ...(search ? { search } : {}),
-      ...(category ? { category } : {}),
-    },
+      'api_token': API_TOKEN,
+     },
   })
 
   return data

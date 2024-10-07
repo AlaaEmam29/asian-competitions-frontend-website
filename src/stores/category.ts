@@ -1,18 +1,17 @@
 import { create } from 'zustand'
 
-type Categories = 'All' | 'Asian' | 'African' | 'European'
-
+ 
 interface CategoryState {
-  selectedCategory: Categories
+  selectedCategory: number
 }
 
 interface CategoryActions {
-  setCategory: (category: Categories) => void
+  setCategory: (category: number) => void
   resetCategory: () => void
 }
 
 export const useCategoryStore = create<CategoryState & CategoryActions>((set) => ({
-  selectedCategory: 'All',
-  setCategory: (category: Categories) => set({ selectedCategory: category }),
-  resetCategory: () => set({ selectedCategory: 'All' }),
+  selectedCategory: 0,
+  setCategory: (category: number) => set({ selectedCategory: category }),
+  resetCategory: () => set({ selectedCategory: 0 }),
 }))

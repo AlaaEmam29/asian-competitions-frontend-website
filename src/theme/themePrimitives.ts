@@ -201,7 +201,7 @@ export const getDesignTokens = (mode: PaletteMode) => {
       // },
     },
     typography: {
-      fontFamily: ['"Cairo", "sans-serif"'].join(','),
+      fontFamily: ['"Arial", "sans-serif"'].join(','),
       htmlFontSize: 10,
 
       h1: {
@@ -255,7 +255,6 @@ export const getDesignTokens = (mode: PaletteMode) => {
     shape: {
       borderRadius: 8,
     },
-    direction: 'rtl',
-    shadows: customShadows,
+     shadows: customShadows,
   }
 }
